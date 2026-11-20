@@ -8,9 +8,19 @@
 five gated missions (brief → storyboard → music → draft → final), each measured by a script,
 with beat-locked background music from MusicGen running on a CPU-only PC.*
 
-![Kiro Crew 사내 세미나 오프닝 — 장면 모음](docs/media/kirocrew-promo-sheet.jpg)
+[![Kiro Crew 사내 세미나 오프닝 — 장면 모음 (누르면 영상)](docs/media/kirocrew-promo-sheet.jpg)](docs/media/kirocrew-promo.mp4)
 
-<sub>이 도구로 만든 15초 영상 「Kiro Crew 사내 세미나 오프닝」 장면 모음. 128 BPM, 초당 컷 0.73, 계획한 컷 100% 일치.</sub>
+<sub>이 도구로 만든 15초 영상 「Kiro Crew 사내 세미나 오프닝」. 128 BPM, 초당 컷 0.73, 계획한 컷 100% 일치.
+**▶ 이미지를 누르면 영상이 열립니다** (소리 있음).</sub>
+
+### ▶ 영상 보기
+
+| 영상 | 파일 | 길이 · 형식 |
+|---|---|---|
+| Kiro Crew 사내 세미나 오프닝 (최종) | [▶ kirocrew-promo.mp4](docs/media/kirocrew-promo.mp4) | 15초 · 1920x1080 · 60fps · 4.8 MB |
+| ubion-fast-test 파이프라인 시험 (M4 초안) | [▶ ubion-fast-test-draft.mp4](docs/media/ubion-fast-test-draft.mp4) | 15초 · 1920x1080 · 30fps · 5.2 MB |
+
+<sub>링크를 누르면 GitHub 파일 화면에서 바로 재생됩니다. 배경음은 둘 다 ffmpeg로 직접 만든 128 BPM 합성 비트입니다.</sub>
 
 ---
 
@@ -65,7 +75,7 @@ flowchart LR
 | `kirocrew-promo` | Kiro Crew 사내 세미나 오프닝, 15초 16:9, 기능 5개 몰아치기 | 5단계 모두 첫 측정 통과. 초당 컷 0.73 · 몰아치기 56% · 계획 컷 일치 1.0 · 박자 일치 1.0 |
 | `ubion-fast-test` | 파이프라인 시험용 15초 키네틱 타이포 | M4 첫 초안 **실패**(초당 컷 0.53, 계획 일치 0.62) → 원인 찾아 고친 뒤 0.8 / 0.92로 통과 |
 
-![ubion-fast-test 장면 모음](docs/media/ubion-fast-test-sheet.jpg)
+[![ubion-fast-test 장면 모음 (누르면 영상)](docs/media/ubion-fast-test-sheet.jpg)](docs/media/ubion-fast-test-draft.mp4)
 
 두 영상의 단계 기록이 그대로 들어 있습니다: [`aidlc/spaces/default/intents/`](aidlc/spaces/default/intents/)
 (요약 · 측정 JSON · 관찰 일지 `memory.md` · 질문지). 실패에서 배운 점은 이렇습니다.
@@ -277,7 +287,7 @@ dashboard/, DASHBOARD.md   생성된 대시보드
 ## 한계
 
 - 경로가 이 PC(Windows, `C:\Users\Administrator\.kiro\crew\workspace\…`)에 맞춰져 있습니다. 다른 PC에서는 플러그인 단계 파일과 `project.md` 규칙의 경로를 바꿔야 합니다.
-- 영상 템플릿과 HyperFrames 구성 파일, 완성 영상(mp4)은 들어 있지 않습니다.
+- 영상 템플릿과 HyperFrames 구성 파일은 들어 있지 않습니다. 완성 영상은 예시 2개만 `docs/media/`에 있습니다.
 - 측정은 "빠른 영상" 기준(`pace: fast`)에 맞춰져 있습니다. 설명 영상(`explainer`)은 기준만 있고 실제로는 아직 시험하지 않았습니다.
 - 한글 글꼴은 로컬 맑은 고딕을 씁니다(Windows).
 
