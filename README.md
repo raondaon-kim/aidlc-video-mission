@@ -8,10 +8,16 @@
 five gated missions (brief → storyboard → music → draft → final), each measured by a script,
 with beat-locked background music from MusicGen running on a CPU-only PC.*
 
-[![Kiro Crew 사내 세미나 오프닝 — 장면 모음 (누르면 영상)](docs/media/kirocrew-promo-sheet.jpg)](docs/media/kirocrew-promo.mp4)
+[![Kiro Crew 사내 세미나 오프닝 — 미리보기 (누르면 소리 있는 영상)](docs/media/kirocrew-promo.gif)](docs/media/kirocrew-promo.mp4)
+
+<details><summary>장면 모음</summary>
+
+![Kiro Crew 장면 모음](docs/media/kirocrew-promo-sheet.jpg)
+
+</details>
 
 <sub>이 도구로 만든 15초 영상 「Kiro Crew 사내 세미나 오프닝」. 128 BPM, 초당 컷 0.73, 계획한 컷 100% 일치.
-**▶ 이미지를 누르면 영상이 열립니다** (소리 있음).</sub>
+**▶ 움직이는 미리보기(소리 없음)를 누르면 소리 있는 영상이 열립니다.**</sub>
 
 ### ▶ 영상 보기
 
@@ -75,7 +81,13 @@ flowchart LR
 | `kirocrew-promo` | Kiro Crew 사내 세미나 오프닝, 15초 16:9, 기능 5개 몰아치기 | 5단계 모두 첫 측정 통과. 초당 컷 0.73 · 몰아치기 56% · 계획 컷 일치 1.0 · 박자 일치 1.0 |
 | `ubion-fast-test` | 파이프라인 시험용 15초 키네틱 타이포 | M4 첫 초안 **실패**(초당 컷 0.53, 계획 일치 0.62) → 원인 찾아 고친 뒤 0.8 / 0.92로 통과 |
 
-[![ubion-fast-test 장면 모음 (누르면 영상)](docs/media/ubion-fast-test-sheet.jpg)](docs/media/ubion-fast-test-draft.mp4)
+[![ubion-fast-test — 미리보기 (누르면 소리 있는 영상)](docs/media/ubion-fast-test.gif)](docs/media/ubion-fast-test-draft.mp4)
+
+<details><summary>장면 모음</summary>
+
+![ubion-fast-test 장면 모음](docs/media/ubion-fast-test-sheet.jpg)
+
+</details>
 
 두 영상의 단계 기록이 그대로 들어 있습니다: [`aidlc/spaces/default/intents/`](aidlc/spaces/default/intents/)
 (요약 · 측정 JSON · 관찰 일지 `memory.md` · 질문지). 실패에서 배운 점은 이렇습니다.
