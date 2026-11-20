@@ -1,0 +1,15 @@
+{
+  "name": "video-mission",
+  "owner": {
+    "name": "Ubion video-lab"
+  },
+  "description": "AIDLC plugin catalogue.",
+  "plugins": [
+    {
+      "name": "video-mission",
+      "source": ".",
+      "version": "0.4.0",
+      "description": "Video production missions for video-lab: brief, storyboard, music, draft render and final render as AI-DLC stages, each with a measured pass/fail check (blocking gate sensor) and a mission summary."
+    }
+  ]
+}

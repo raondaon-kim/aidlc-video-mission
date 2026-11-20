@@ -1,0 +1,48 @@
+{
+  "_note": "Trend-genre presets for MusicGen text prompts. bpm is the TARGET tempo: post-processing stretches the take to it so cuts land on a computed grid. 120/128 match the measured fast-template rhythm (8th note = 0.25 / 0.234 s). Prompts name genres, instruments and texture only — never artists or songs.",
+  "minimal-techno": {
+    "bpm": 128,
+    "use": "tech launch, product reel, kinetic type",
+    "prompt": "minimal techno, punchy four-on-the-floor kick, tight rolling bassline, crisp closed hi-hats on 8th notes, metallic percussion, dark hypnotic synth stab, club energy, clean modern mix, instrumental, no vocals"
+  },
+  "hype-sports": {
+    "bpm": 125,
+    "use": "high-energy ad, feature cascade, countdown",
+    "prompt": "hype sports electronic, big punchy drums, distorted 808 bass, aggressive synth brass stabs, claps on 2 and 4, rising energy, stadium feel, confident and intense, instrumental, no vocals"
+  },
+  "trailer-hybrid": {
+    "bpm": 120,
+    "use": "launch film opener, logo reveal, dramatic build",
+    "prompt": "cinematic trailer hybrid, pulsing synth ostinato, heavy taiko and modern drum hits, braams, ticking clock percussion, tension build, epic and modern, instrumental, no vocals"
+  },
+  "drift-phonk": {
+    "bpm": 140,
+    "use": "edgy social cut, car or gaming vibe, fast montage",
+    "prompt": "drift phonk, cowbell melody, heavy distorted 808 bass, hard trap drums, dark memphis atmosphere, aggressive and gritty, instrumental, no vocals"
+  },
+  "uk-garage": {
+    "bpm": 132,
+    "use": "trendy lifestyle reel, fashion, app promo",
+    "prompt": "uk garage, shuffled 2-step drums, swung hi-hats, warm sub bass, chopped vocal-like synth chords, bright and groovy, modern club, instrumental, no vocals"
+  },
+  "afro-house": {
+    "bpm": 122,
+    "use": "warm brand film, travel, community",
+    "prompt": "afro house, organic percussion, shakers and congas, deep rolling bassline, warm pads, uplifting and groovy, instrumental, no vocals"
+  },
+  "future-bass": {
+    "bpm": 120,
+    "use": "playful SaaS launch, colorful UI demo",
+    "prompt": "future bass, wide supersaw chords, sidechained pumping synths, crisp trap hats, bright and euphoric, catchy synth plucks, instrumental, no vocals"
+  },
+  "synthwave": {
+    "bpm": 110,
+    "use": "retro promo, neon visuals",
+    "prompt": "synthwave, driving analog bassline, gated reverb snare, shimmering arpeggios, warm retro pads, nostalgic 80s night drive, instrumental, no vocals"
+  },
+  "lofi-explainer": {
+    "bpm": 88,
+    "use": "calm lecture / explainer bed under narration (not for fast cuts)",
+    "prompt": "lofi hip hop, dusty drums, mellow electric piano chords, soft vinyl crackle, warm bass, calm and focused study vibe, instrumental, no vocals"
+  }
+}

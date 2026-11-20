@@ -1,0 +1,64 @@
+{
+ "mission": "draft",
+ "project": "kirocrew-promo",
+ "measured_at": "2026-11-20T13:06:07",
+ "checks": [
+  {
+   "id": "fps",
+   "label": "fps",
+   "value": 30.0,
+   "target": "30",
+   "pass": true,
+   "cid": "C4.1"
+  },
+  {
+   "id": "length",
+   "label": "길이(초)",
+   "value": 15.0,
+   "target": "15.0 ±0.15",
+   "pass": true,
+   "cid": "C4.2"
+  },
+  {
+   "id": "audio",
+   "label": "소리",
+   "value": true,
+   "target": "있음",
+   "pass": true,
+   "cid": "C4.5"
+  },
+  {
+   "id": "cuts_per_sec",
+   "label": "초당 컷",
+   "value": 0.73,
+   "target": "0.6~0.8",
+   "pass": true,
+   "cid": "C4.3"
+  },
+  {
+   "id": "burst",
+   "label": "잰 몰아치기 위치 (마지막)",
+   "value": 0.565,
+   "target": "0.55~0.75",
+   "pass": true,
+   "cid": "C4.4"
+  },
+  {
+   "id": "plan_match",
+   "label": "계획대로 잘림",
+   "value": 1.0,
+   "target": "≥0.8 (±0.1s)",
+   "pass": true,
+   "cid": "C4.6"
+  },
+  {
+   "id": "beat_sync",
+   "label": "박자에 컷",
+   "value": 1.0,
+   "target": "≥0.8 (±0.05s)",
+   "pass": true,
+   "cid": "C4.7"
+  }
+ ],
+ "pass": true
+}

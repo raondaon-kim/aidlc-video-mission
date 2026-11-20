@@ -1,0 +1,56 @@
+{
+ "mission": "music",
+ "project": "kirocrew-promo",
+ "measured_at": "2026-11-20T12:57:32",
+ "checks": [
+  {
+   "id": "length",
+   "label": "길이(초)",
+   "value": 15.0,
+   "target": "15.0 ±0.05",
+   "pass": true,
+   "cid": "C3.1"
+  },
+  {
+   "id": "tempo",
+   "label": "BPM",
+   "value": 128.0,
+   "target": "128.0 ±2",
+   "pass": true,
+   "cid": "C3.2"
+  },
+  {
+   "id": "loudness",
+   "label": "음량(LUFS)",
+   "value": -14.37,
+   "target": "-14.0 ±1",
+   "pass": true,
+   "cid": "C3.3"
+  },
+  {
+   "id": "grid",
+   "label": "박자 그리드",
+   "value": true,
+   "target": "있음",
+   "pass": true,
+   "cid": "C3.4"
+  },
+  {
+   "id": "license",
+   "label": "라이선스",
+   "value": "self-made (no third-party audio)",
+   "target": "상업이면 NC 불가",
+   "pass": true,
+   "cid": "C3.5"
+  },
+  {
+   "id": "seams",
+   "label": "이음새",
+   "value": "해당 없음 (28초 이하)",
+   "target": "긴 음악만",
+   "pass": true,
+   "cid": "C3.6"
+  }
+ ],
+ "pass": true
+}

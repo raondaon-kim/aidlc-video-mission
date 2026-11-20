@@ -1,0 +1,75 @@
+{
+ "mission": "storyboard",
+ "project": "ubion-fast-test",
+ "measured_at": "2026-11-20T11:49:20",
+ "checks": [
+  {
+   "id": "coverage",
+   "label": "타임라인 빈틈",
+   "value": "0.0~15.0s",
+   "target": "0~15.0s, 빈틈 ≤0.1s",
+   "pass": true,
+   "cid": "C2.1"
+  },
+  {
+   "id": "normal_avg",
+   "label": "보통 장면 평균(초)",
+   "value": 2.19,
+   "target": "1.5~2.5 (fast)",
+   "pass": true,
+   "cid": "C2.2"
+  },
+  {
+   "id": "words",
+   "label": "장면당 최대 단어",
+   "value": 4,
+   "target": "≤5",
+   "pass": true,
+   "cid": "C2.6"
+  },
+  {
+   "id": "burst_count",
+   "label": "몰아치기 개수",
+   "value": 1,
+   "target": "1 (15초당 1)",
+   "pass": true,
+   "cid": "C2.7"
+  },
+  {
+   "id": "burst_pos",
+   "label": "마지막 몰아치기 위치",
+   "value": 0.562,
+   "target": "0.55~0.75",
+   "pass": true,
+   "cid": "C2.3"
+  },
+  {
+   "id": "burst_cuts",
+   "label": "몰아치기마다 컷 수",
+   "value": [
+    8
+   ],
+   "target": "각 5~9",
+   "pass": true,
+   "cid": "C2.4"
+  },
+  {
+   "id": "burst_gap",
+   "label": "몰아치기 간격(초)",
+   "value": [
+    0.234,
+    0.234,
+    0.234,
+    0.234,
+    0.234,
+    0.234,
+    0.234,
+    0.234
+   ],
+   "target": "각 0.2~0.4",
+   "pass": true,
+   "cid": "C2.5"
+  }
+ ],
+ "pass": true
+}

@@ -1,0 +1,88 @@
+{
+ "mission": "brief",
+ "project": "ubion-fast-test",
+ "measured_at": "2026-11-20T11:49:20",
+ "checks": [
+  {
+   "id": "name",
+   "label": "이름",
+   "value": "ubion-fast-test",
+   "target": "있음",
+   "pass": true,
+   "cid": "C1.1"
+  },
+  {
+   "id": "purpose",
+   "label": "목적",
+   "value": "파이프라인 시험용 — video-mission v0.4 제작 흐름과 기준 점검 (내부에서만 봄)",
+   "target": "있음",
+   "pass": true,
+   "cid": "C1.1"
+  },
+  {
+   "id": "map_row",
+   "label": "지도 줄",
+   "value": "빠른 글자(키네틱 타입) 영상",
+   "target": "있음",
+   "pass": true,
+   "cid": "C1.1"
+  },
+  {
+   "id": "duration",
+   "label": "길이(초)",
+   "value": 15,
+   "target": "5~28 (28 초과는 long_music)",
+   "pass": true,
+   "cid": "C1.2"
+  },
+  {
+   "id": "aspect",
+   "label": "비율",
+   "value": "16:9",
+   "target": "16:9 · 9:16 · 1:1",
+   "pass": true,
+   "cid": "C1.3"
+  },
+  {
+   "id": "commercial",
+   "label": "상업 여부",
+   "value": false,
+   "target": "true/false",
+   "pass": true,
+   "cid": "C1.4"
+  },
+  {
+   "id": "tools",
+   "label": "템플릿/스킬",
+   "value": [
+    "24-one-time-bundle",
+    "02-showreel-kinetic"
+   ],
+   "target": "1개 이상",
+   "pass": true,
+   "cid": "C1.5"
+  },
+  {
+   "id": "colors",
+   "label": "브랜드 색",
+   "value": [
+    "#051753",
+    "#0068f7",
+    "#0025a0",
+    "#ffffff"
+   ],
+   "target": "hex 2개 이상",
+   "pass": true,
+   "cid": "C1.6"
+  },
+  {
+   "id": "pace",
+   "label": "빠르기",
+   "value": "fast",
+   "target": "fast / explainer",
+   "pass": true,
+   "cid": "C1.7"
+  }
+ ],
+ "pass": true
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "uuid": "01a1f6c9-95d9-79d7-9851-d449304e4e0c",
+    "slug": "fast-test-video",
+    "dirName": "261120-fast-test-video",
+    "scope": "video-mission-video",
+    "repos": [
+      "plugins"
+    ],
+    "status": "in-flight",
+    "request": "f3083a51"
+  },
+  {
+    "uuid": "01a1f70e-af3e-765f-803f-918adfcf3f7f",
+    "slug": "kirocrew-promo",
+    "dirName": "261120-kirocrew-promo",
+    "scope": "video-mission-video",
+    "repos": [
+      "plugins"
+    ],
+    "status": "complete",
+    "request": "115e6251"
+  }
+]

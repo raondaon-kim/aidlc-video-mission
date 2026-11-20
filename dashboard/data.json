@@ -1,0 +1,881 @@
+[
+ {
+  "intent": "261120-fast-test-video",
+  "space": "default",
+  "cards": [
+   {
+    "code": "M1",
+    "mission": "brief",
+    "label": "기획",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 9,
+    "total": 9,
+    "failed": [],
+    "result": "시험용 15초 · 16:9 · 비상업 · fast · UBION(학습자 대상), 문구 \"빠르게. / 정확하게. / 박자에 맞게.\"",
+    "measured_at": "2026-11-20T11:49:20",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-fast-test-video\\inception\\video-mission-brief\\video-mission-brief.md",
+    "requirements": [
+     {
+      "id": "F1.1",
+      "text": "목적·대상·길이·비율·상업 여부·빠르기(fast/explainer)·필수 문구를 한 번에 묻는다",
+      "done": true
+     },
+     {
+      "id": "F1.2",
+      "text": "지도 1장에서 줄을 고르고 템플릿 후보를 정한다",
+      "done": true
+     },
+     {
+      "id": "F1.3",
+      "text": "프로젝트 폴더와 brief.json / brief.md를 만든다",
+      "done": true
+     },
+     {
+      "id": "F1.4",
+      "text": "brand-intake로 색·로고·글꼴을 정리한다 (brand.md, MOTION.md)",
+      "done": true
+     },
+     {
+      "id": "F1.5",
+      "text": "28초를 넘으면 음악 이어 붙이기(long_music)를 켤지 사람에게 확인한다",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C1.1",
+      "text": "이름·목적·지도 줄이 있다",
+      "target": "모두 있음",
+      "pass": true
+     },
+     {
+      "cid": "C1.2",
+      "text": "길이",
+      "target": "5~28초 (long_music이면 ~60초)",
+      "pass": true
+     },
+     {
+      "cid": "C1.3",
+      "text": "비율",
+      "target": "16:9 · 9:16 · 1:1",
+      "pass": true
+     },
+     {
+      "cid": "C1.4",
+      "text": "상업 여부를 정했다",
+      "target": "true / false",
+      "pass": true
+     },
+     {
+      "cid": "C1.5",
+      "text": "템플릿 또는 스킬",
+      "target": "1개 이상",
+      "pass": true
+     },
+     {
+      "cid": "C1.6",
+      "text": "브랜드 색",
+      "target": "hex 2개 이상",
+      "pass": true
+     },
+     {
+      "cid": "C1.7",
+      "text": "빠르기",
+      "target": "fast / explainer",
+      "pass": true
+     }
+    ],
+    "goal": "영상의 목적과 고정 조건을 정한다",
+    "weight": "가벼움",
+    "req_done": 5,
+    "req_total": 5
+   },
+   {
+    "code": "M2",
+    "mission": "storyboard",
+    "label": "스토리보드",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 7,
+    "total": 7,
+    "failed": [],
+    "result": "장면 14개(보통 6 + 몰아치기 8), 몰아치기 8.44~10.31초, 컷 간격 0.234초(8분음표), 흰 번쩍 1회.",
+    "measured_at": "2026-11-20T11:49:20",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-fast-test-video\\inception\\video-mission-storyboard\\video-mission-storyboard.md",
+    "requirements": [
+     {
+      "id": "F2.1",
+      "text": "보통 장면을 1마디(약 2초) 단위로 놓는다",
+      "done": true
+     },
+     {
+      "id": "F2.2",
+      "text": "fast면 15초마다 몰아치기 1구간(55~75% 위치 기준, 30초면 2구간)을 5~9컷으로 넣는다",
+      "done": true
+     },
+     {
+      "id": "F2.3",
+      "text": "장면마다 전환 부품과 글자(5단어 이하)를 정한다",
+      "done": true
+     },
+     {
+      "id": "F2.4",
+      "text": "음악 BPM을 정한다 (기본 128)",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C2.1",
+      "text": "타임라인 빈틈",
+      "target": "0~길이 전체, 빈틈 0.1초 이하",
+      "pass": true
+     },
+     {
+      "cid": "C2.2",
+      "text": "보통 장면 평균",
+      "target": "1.5~2.5초 (explainer 2~5초)",
+      "pass": true
+     },
+     {
+      "cid": "C2.3",
+      "text": "마지막 몰아치기 시작 위치",
+      "target": "55~75% (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C2.4",
+      "text": "몰아치기마다 컷 수",
+      "target": "연속 5~9컷 (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C2.5",
+      "text": "몰아치기 컷 간격",
+      "target": "각 0.2~0.4초 (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C2.6",
+      "text": "장면당 글자",
+      "target": "5단어 이하",
+      "pass": true
+     },
+     {
+      "cid": "C2.7",
+      "text": "몰아치기 개수",
+      "target": "15초당 1개, 최소 1 (fast)",
+      "pass": true
+     }
+    ],
+    "goal": "모든 장면을 시간 위에 놓고 빠른 리듬을 설계한다",
+    "weight": "가벼움",
+    "req_done": 4,
+    "req_total": 4
+   },
+   {
+    "code": "M3",
+    "mission": "music",
+    "label": "음악",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 6,
+    "total": 6,
+    "failed": [],
+    "result": "ffmpeg 합성 테크노 비트(킥·하이햇·베이스·스탭), 정확히 128 BPM → 박자 고정·첫 박 정렬·음량 맞춤·몰아치기 구간 끊김.",
+    "measured_at": "2026-11-20T11:55:51",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-fast-test-video\\inception\\video-mission-music\\video-mission-music.md",
+    "requirements": [
+     {
+      "id": "F3.1",
+      "text": "상업 여부로 음원 경로를 고른다 (상업이면 MusicGen 금지)",
+      "done": true
+     },
+     {
+      "id": "F3.2",
+      "text": "프리셋·BPM·길이로 만들고 BPM 고정·음량 맞춤을 한다",
+      "done": true
+     },
+     {
+      "id": "F3.3",
+      "text": "스토리보드 컷을 마디(보통)와 8분음표(몰아치기)에 맞춘다",
+      "done": true
+     },
+     {
+      "id": "F3.4",
+      "text": "28초를 넘으면 앞 조각의 끝 4초를 이어받아 다음 조각을 만들고 붙인다 (long_music)",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C3.1",
+      "text": "길이",
+      "target": "영상 길이 ±0.05초",
+      "pass": true
+     },
+     {
+      "cid": "C3.2",
+      "text": "BPM",
+      "target": "목표 ±2, 늘림 0.8~1.25배",
+      "pass": true
+     },
+     {
+      "cid": "C3.3",
+      "text": "음량",
+      "target": "-14 ±1 LUFS",
+      "pass": true
+     },
+     {
+      "cid": "C3.4",
+      "text": "박자 그리드",
+      "target": "bgm.grid.json 있음",
+      "pass": true
+     },
+     {
+      "cid": "C3.5",
+      "text": "라이선스",
+      "target": "상업이면 비상업(NC) 불가",
+      "pass": true
+     },
+     {
+      "cid": "C3.6",
+      "text": "이음새",
+      "target": "조각 수 맞음, 이음새 앞뒤 음량 차 3dB 이하 (긴 음악만)",
+      "pass": true
+     }
+    ],
+    "goal": "BPM 고정 배경음과 박자 그리드를 만들고 컷을 박자에 맞춘다",
+    "weight": "무거움",
+    "req_done": 4,
+    "req_total": 4
+   },
+   {
+    "code": "M4",
+    "mission": "draft",
+    "label": "시험 렌더",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 7,
+    "total": 7,
+    "failed": [],
+    "result": "15초 16:9 초안 영상 (로고 → 빠르게/정확하게 → LMS 카드 벽 → 7단어 몰아치기+흰 번쩍 → 박자에 맞게 → 엔드 카드).",
+    "measured_at": "2026-11-20T12:07:04",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-fast-test-video\\inception\\video-mission-draft\\video-mission-draft.md",
+    "requirements": [
+     {
+      "id": "F4.1",
+      "text": "템플릿 복사 또는 새 프로젝트 (CLI 버전을 섞지 않는다)",
+      "done": true
+     },
+     {
+      "id": "F4.2",
+      "text": "스토리보드 시간·전환·음악을 넣는다",
+      "done": true
+     },
+     {
+      "id": "F4.3",
+      "text": "30fps, 워커 1개로 렌더한다",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C4.1",
+      "text": "fps",
+      "target": "30",
+      "pass": true
+     },
+     {
+      "cid": "C4.2",
+      "text": "길이",
+      "target": "±0.15초",
+      "pass": true
+     },
+     {
+      "cid": "C4.3",
+      "text": "초당 컷",
+      "target": "0.6~0.8 (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C4.4",
+      "text": "잰 몰아치기 위치",
+      "target": "55~75% (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C4.5",
+      "text": "소리",
+      "target": "있음",
+      "pass": true
+     },
+     {
+      "cid": "C4.6",
+      "text": "계획대로 잘림",
+      "target": "계획 컷의 80% 이상이 ±0.1초 안",
+      "pass": true
+     },
+     {
+      "cid": "C4.7",
+      "text": "박자에 컷",
+      "target": "잰 컷의 80% 이상이 8분음표 ±0.05초 안",
+      "pass": true
+     }
+    ],
+    "goal": "구성을 만들고 30fps 초안으로 리듬을 실제로 잰다",
+    "weight": "무거움",
+    "req_done": 3,
+    "req_total": 3
+   },
+   {
+    "code": "M5",
+    "mission": "final",
+    "label": "최종",
+    "state": "진행",
+    "state_tone": "info",
+    "verdict": "NOT MEASURED",
+    "passed": 0,
+    "total": 0,
+    "failed": [],
+    "result": "",
+    "measured_at": "",
+    "summary": "",
+    "requirements": [
+     {
+      "id": "F5.1",
+      "text": "60fps로 렌더한다 (빈 메모리 4GB 미만이면 워커 1개)",
+      "done": null
+     },
+     {
+      "id": "F5.2",
+      "text": "비율이 다르면 reel-export로 바꾼다",
+      "done": null
+     },
+     {
+      "id": "F5.3",
+      "text": "측정값·렌더 시간·메모리를 proposals.md에 [대기]로 남긴다",
+      "done": null
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C5.1",
+      "text": "fps",
+      "target": "60",
+      "pass": null
+     },
+     {
+      "cid": "C5.2",
+      "text": "길이",
+      "target": "±0.15초",
+      "pass": null
+     },
+     {
+      "cid": "C5.3",
+      "text": "초당 컷·몰아치기",
+      "target": "M4와 같음",
+      "pass": null
+     },
+     {
+      "cid": "C5.4",
+      "text": "소리·음량",
+      "target": "있음, -14 ±1.5 LUFS",
+      "pass": null
+     },
+     {
+      "cid": "C5.5",
+      "text": "해상도",
+      "target": "비율대로 1920x1080 · 1080x1920 · 1080x1080",
+      "pass": null
+     },
+     {
+      "cid": "C5.6",
+      "text": "제안 기록",
+      "target": "proposals.md에 프로젝트 이름",
+      "pass": null
+     },
+     {
+      "cid": "C5.7",
+      "text": "업로드 형식",
+      "target": "H.264 + yuv420p",
+      "pass": null
+     }
+    ],
+    "goal": "60fps 완성본과 다음을 위한 배움 1개",
+    "weight": "무거움",
+    "req_done": 0,
+    "req_total": 3
+   }
+  ],
+  "project": "ubion-fast-test",
+  "title": "15초 빠른 시험 영상",
+  "status": "멈춤 · M5 최종",
+  "status_tone": "muted",
+  "done": 4,
+  "started": "2026-11-20",
+  "path": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab\\projects\\ubion-fast-test",
+  "brief": {
+   "duration_s": 15,
+   "aspect": "16:9",
+   "pace": "fast",
+   "commercial": false,
+   "purpose": "파이프라인 시험용 — video-mission v0.4 제작 흐름과 기준 점검 (내부에서만 봄)",
+   "colors": [
+    "#051753",
+    "#0068f7",
+    "#0025a0",
+    "#ffffff"
+   ]
+  },
+  "media": {
+   "draft.mp4": "ubion-fast-test/draft.mp4",
+   "comp/snapshots/contact-sheet.jpg": "ubion-fast-test/comp/snapshots/contact-sheet.jpg"
+  }
+ },
+ {
+  "intent": "261120-kirocrew-promo",
+  "space": "default",
+  "cards": [
+   {
+    "code": "M1",
+    "mission": "brief",
+    "label": "기획",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 9,
+    "total": 9,
+    "failed": [],
+    "result": "Kiro Crew 홍보영상 기획: 15초 · 16:9 · fast · 비상업, 문구 \"여러 에이전트를.\" → \"한 화면에서.\" → 기능 몰아치기 → \"Kiro Crew.\"",
+    "measured_at": "2026-11-20T12:51:55",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-kirocrew-promo\\inception\\video-mission-brief\\video-mission-brief.md",
+    "requirements": [
+     {
+      "id": "F1.1",
+      "text": "목적·대상·길이·비율·상업 여부·빠르기(fast/explainer)·필수 문구를 한 번에 묻는다",
+      "done": true
+     },
+     {
+      "id": "F1.2",
+      "text": "지도 1장에서 줄을 고르고 템플릿 후보를 정한다",
+      "done": true
+     },
+     {
+      "id": "F1.3",
+      "text": "프로젝트 폴더와 brief.json / brief.md를 만든다",
+      "done": true
+     },
+     {
+      "id": "F1.4",
+      "text": "brand-intake로 색·로고·글꼴을 정리한다 (brand.md, MOTION.md)",
+      "done": true
+     },
+     {
+      "id": "F1.5",
+      "text": "28초를 넘으면 음악 이어 붙이기(long_music)를 켤지 사람에게 확인한다",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C1.1",
+      "text": "이름·목적·지도 줄이 있다",
+      "target": "모두 있음",
+      "pass": true
+     },
+     {
+      "cid": "C1.2",
+      "text": "길이",
+      "target": "5~28초 (long_music이면 ~60초)",
+      "pass": true
+     },
+     {
+      "cid": "C1.3",
+      "text": "비율",
+      "target": "16:9 · 9:16 · 1:1",
+      "pass": true
+     },
+     {
+      "cid": "C1.4",
+      "text": "상업 여부를 정했다",
+      "target": "true / false",
+      "pass": true
+     },
+     {
+      "cid": "C1.5",
+      "text": "템플릿 또는 스킬",
+      "target": "1개 이상",
+      "pass": true
+     },
+     {
+      "cid": "C1.6",
+      "text": "브랜드 색",
+      "target": "hex 2개 이상",
+      "pass": true
+     },
+     {
+      "cid": "C1.7",
+      "text": "빠르기",
+      "target": "fast / explainer",
+      "pass": true
+     }
+    ],
+    "goal": "영상의 목적과 고정 조건을 정한다",
+    "weight": "가벼움",
+    "req_done": 5,
+    "req_total": 5
+   },
+   {
+    "code": "M2",
+    "mission": "storyboard",
+    "label": "스토리보드",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 7,
+    "total": 7,
+    "failed": [],
+    "result": "12장면 스토리보드: 유령 → \"여러 에이전트를.\" → \"한 화면에서.\" → 대시보드 카드 4개 → 몰아치기(동시 작업·대시보드·스킬·기억·예약·번쩍) → \"Kiro Crew.\" → 엔드 카드.",
+    "measured_at": "2026-11-20T12:53:48",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-kirocrew-promo\\inception\\video-mission-storyboard\\video-mission-storyboard.md",
+    "requirements": [
+     {
+      "id": "F2.1",
+      "text": "보통 장면을 1마디(약 2초) 단위로 놓는다",
+      "done": true
+     },
+     {
+      "id": "F2.2",
+      "text": "fast면 15초마다 몰아치기 1구간(55~75% 위치 기준, 30초면 2구간)을 5~9컷으로 넣는다",
+      "done": true
+     },
+     {
+      "id": "F2.3",
+      "text": "장면마다 전환 부품과 글자(5단어 이하)를 정한다",
+      "done": true
+     },
+     {
+      "id": "F2.4",
+      "text": "음악 BPM을 정한다 (기본 128)",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C2.1",
+      "text": "타임라인 빈틈",
+      "target": "0~길이 전체, 빈틈 0.1초 이하",
+      "pass": true
+     },
+     {
+      "cid": "C2.2",
+      "text": "보통 장면 평균",
+      "target": "1.5~2.5초 (explainer 2~5초)",
+      "pass": true
+     },
+     {
+      "cid": "C2.3",
+      "text": "마지막 몰아치기 시작 위치",
+      "target": "55~75% (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C2.4",
+      "text": "몰아치기마다 컷 수",
+      "target": "연속 5~9컷 (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C2.5",
+      "text": "몰아치기 컷 간격",
+      "target": "각 0.2~0.4초 (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C2.6",
+      "text": "장면당 글자",
+      "target": "5단어 이하",
+      "pass": true
+     },
+     {
+      "cid": "C2.7",
+      "text": "몰아치기 개수",
+      "target": "15초당 1개, 최소 1 (fast)",
+      "pass": true
+     }
+    ],
+    "goal": "모든 장면을 시간 위에 놓고 빠른 리듬을 설계한다",
+    "weight": "가벼움",
+    "req_done": 4,
+    "req_total": 4
+   },
+   {
+    "code": "M3",
+    "mission": "music",
+    "label": "음악",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 6,
+    "total": 6,
+    "failed": [],
+    "result": "ffmpeg 합성 비트(킥·하이햇·베이스·아르페지오), 정확히 128 BPM → 박자 고정·첫 박 정렬·음량 맞춤·몰아치기 끊김.",
+    "measured_at": "2026-11-20T12:57:32",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-kirocrew-promo\\inception\\video-mission-music\\video-mission-music.md",
+    "requirements": [
+     {
+      "id": "F3.1",
+      "text": "상업 여부로 음원 경로를 고른다 (상업이면 MusicGen 금지)",
+      "done": true
+     },
+     {
+      "id": "F3.2",
+      "text": "프리셋·BPM·길이로 만들고 BPM 고정·음량 맞춤을 한다",
+      "done": true
+     },
+     {
+      "id": "F3.3",
+      "text": "스토리보드 컷을 마디(보통)와 8분음표(몰아치기)에 맞춘다",
+      "done": true
+     },
+     {
+      "id": "F3.4",
+      "text": "28초를 넘으면 앞 조각의 끝 4초를 이어받아 다음 조각을 만들고 붙인다 (long_music)",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C3.1",
+      "text": "길이",
+      "target": "영상 길이 ±0.05초",
+      "pass": true
+     },
+     {
+      "cid": "C3.2",
+      "text": "BPM",
+      "target": "목표 ±2, 늘림 0.8~1.25배",
+      "pass": true
+     },
+     {
+      "cid": "C3.3",
+      "text": "음량",
+      "target": "-14 ±1 LUFS",
+      "pass": true
+     },
+     {
+      "cid": "C3.4",
+      "text": "박자 그리드",
+      "target": "bgm.grid.json 있음",
+      "pass": true
+     },
+     {
+      "cid": "C3.5",
+      "text": "라이선스",
+      "target": "상업이면 비상업(NC) 불가",
+      "pass": true
+     },
+     {
+      "cid": "C3.6",
+      "text": "이음새",
+      "target": "조각 수 맞음, 이음새 앞뒤 음량 차 3dB 이하 (긴 음악만)",
+      "pass": true
+     }
+    ],
+    "goal": "BPM 고정 배경음과 박자 그리드를 만들고 컷을 박자에 맞춘다",
+    "weight": "무거움",
+    "req_done": 4,
+    "req_total": 4
+   },
+   {
+    "code": "M4",
+    "mission": "draft",
+    "label": "시험 렌더",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 7,
+    "total": 7,
+    "failed": [],
+    "result": "15초 16:9 초안 (유령 → 여러 에이전트를. → 한 화면에서. → 대시보드 카드 4개 → 기능 5개 몰아치기+번쩍 → Kiro Crew. → 엔드 카드).",
+    "measured_at": "2026-11-20T13:06:07",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-kirocrew-promo\\inception\\video-mission-draft\\video-mission-draft.md",
+    "requirements": [
+     {
+      "id": "F4.1",
+      "text": "템플릿 복사 또는 새 프로젝트 (CLI 버전을 섞지 않는다)",
+      "done": true
+     },
+     {
+      "id": "F4.2",
+      "text": "스토리보드 시간·전환·음악을 넣는다",
+      "done": true
+     },
+     {
+      "id": "F4.3",
+      "text": "30fps, 워커 1개로 렌더한다",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C4.1",
+      "text": "fps",
+      "target": "30",
+      "pass": true
+     },
+     {
+      "cid": "C4.2",
+      "text": "길이",
+      "target": "±0.15초",
+      "pass": true
+     },
+     {
+      "cid": "C4.3",
+      "text": "초당 컷",
+      "target": "0.6~0.8 (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C4.4",
+      "text": "잰 몰아치기 위치",
+      "target": "55~75% (fast)",
+      "pass": true
+     },
+     {
+      "cid": "C4.5",
+      "text": "소리",
+      "target": "있음",
+      "pass": true
+     },
+     {
+      "cid": "C4.6",
+      "text": "계획대로 잘림",
+      "target": "계획 컷의 80% 이상이 ±0.1초 안",
+      "pass": true
+     },
+     {
+      "cid": "C4.7",
+      "text": "박자에 컷",
+      "target": "잰 컷의 80% 이상이 8분음표 ±0.05초 안",
+      "pass": true
+     }
+    ],
+    "goal": "구성을 만들고 30fps 초안으로 리듬을 실제로 잰다",
+    "weight": "무거움",
+    "req_done": 3,
+    "req_total": 3
+   },
+   {
+    "code": "M5",
+    "mission": "final",
+    "label": "최종",
+    "state": "완료",
+    "state_tone": "ok",
+    "verdict": "PASS",
+    "passed": 9,
+    "total": 9,
+    "failed": [],
+    "result": "Kiro Crew 사내 세미나 오프닝 영상 최종본, 15초 · 1920x1080 · 60fps · H.264/yuv420p.",
+    "measured_at": "2026-11-20T13:16:23",
+    "summary": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab-tools\\aidlc\\spaces\\default\\intents\\261120-kirocrew-promo\\inception\\video-mission-final\\video-mission-final.md",
+    "requirements": [
+     {
+      "id": "F5.1",
+      "text": "60fps로 렌더한다 (빈 메모리 4GB 미만이면 워커 1개)",
+      "done": true
+     },
+     {
+      "id": "F5.2",
+      "text": "비율이 다르면 reel-export로 바꾼다",
+      "done": true
+     },
+     {
+      "id": "F5.3",
+      "text": "측정값·렌더 시간·메모리를 proposals.md에 [대기]로 남긴다",
+      "done": true
+     }
+    ],
+    "criteria": [
+     {
+      "cid": "C5.1",
+      "text": "fps",
+      "target": "60",
+      "pass": true
+     },
+     {
+      "cid": "C5.2",
+      "text": "길이",
+      "target": "±0.15초",
+      "pass": true
+     },
+     {
+      "cid": "C5.3",
+      "text": "초당 컷·몰아치기",
+      "target": "M4와 같음",
+      "pass": true
+     },
+     {
+      "cid": "C5.4",
+      "text": "소리·음량",
+      "target": "있음, -14 ±1.5 LUFS",
+      "pass": true
+     },
+     {
+      "cid": "C5.5",
+      "text": "해상도",
+      "target": "비율대로 1920x1080 · 1080x1920 · 1080x1080",
+      "pass": true
+     },
+     {
+      "cid": "C5.6",
+      "text": "제안 기록",
+      "target": "proposals.md에 프로젝트 이름",
+      "pass": true
+     },
+     {
+      "cid": "C5.7",
+      "text": "업로드 형식",
+      "target": "H.264 + yuv420p",
+      "pass": true
+     }
+    ],
+    "goal": "60fps 완성본과 다음을 위한 배움 1개",
+    "weight": "무거움",
+    "req_done": 3,
+    "req_total": 3
+   }
+  ],
+  "project": "kirocrew-promo",
+  "title": "KiroCrew 내부 홍보영상 (비상업)",
+  "status": "완료",
+  "status_tone": "ok",
+  "done": 5,
+  "started": "2026-11-20",
+  "path": "C:\\Users\\Administrator\\.kiro\\crew\\workspace\\video-lab\\projects\\kirocrew-promo",
+  "brief": {
+   "duration_s": 15,
+   "aspect": "16:9",
+   "pace": "fast",
+   "commercial": false,
+   "purpose": "사내 교육·세미나 오프닝 — Kiro Crew가 무엇인지 15초에 빠르게 보여준다 (내부용, 비상업)",
+   "colors": [
+    "#211d25",
+    "#9f63ff",
+    "#c19aff",
+    "#f2f1f4"
+   ]
+  },
+  "media": {
+   "final.mp4": "kirocrew-promo/final.mp4",
+   "draft.mp4": "kirocrew-promo/draft.mp4",
+   "snapshots/contact-sheet.jpg": "kirocrew-promo/snapshots/contact-sheet.jpg"
+  }
+ }
+]

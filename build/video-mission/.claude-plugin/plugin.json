@@ -1,0 +1,8 @@
+{
+  "name": "video-mission",
+  "version": "0.4.0",
+  "description": "Video production missions for video-lab: brief, storyboard, music, draft render and final render as AI-DLC stages, each with a measured pass/fail check (blocking gate sensor) and a mission summary.",
+  "author": {
+    "name": "Ubion video-lab"
+  }
+}

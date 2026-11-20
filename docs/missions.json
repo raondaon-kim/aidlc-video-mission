@@ -1,0 +1,392 @@
+{
+  "_note": "Single source of truth for each mission's requirements. Edit here, then run: python scripts/build_mission_docs.py. PROCESS_SPEC.md explains the process; this file is what the stage view, dashboard and AI-DLC stages read.",
+  "version": "0.4",
+  "missions": [
+    {
+      "code": "M1",
+      "slug": "brief",
+      "label": "기획",
+      "weight": "가벼움",
+      "goal": "영상의 목적과 고정 조건을 정한다",
+      "inputs": [
+        "사람의 요청"
+      ],
+      "outputs": [
+        "projects/<이름>/brief.json",
+        "projects/<이름>/brief.md"
+      ],
+      "skills": [
+        "SKILLS_INDEX.md 1·6장"
+      ],
+      "approver": "사람 (G1)",
+      "requirements": [
+        {
+          "id": "F1.1",
+          "text": "목적·대상·길이·비율·상업 여부·빠르기(fast/explainer)·필수 문구를 한 번에 묻는다"
+        },
+        {
+          "id": "F1.2",
+          "text": "지도 1장에서 줄을 고르고 템플릿 후보를 정한다"
+        },
+        {
+          "id": "F1.3",
+          "text": "프로젝트 폴더와 brief.json / brief.md를 만든다"
+        },
+        {
+          "id": "F1.4",
+          "text": "brand-intake로 색·로고·글꼴을 정리한다 (brand.md, MOTION.md)"
+        },
+        {
+          "id": "F1.5",
+          "text": "28초를 넘으면 음악 이어 붙이기(long_music)를 켤지 사람에게 확인한다"
+        }
+      ],
+      "criteria": [
+        {
+          "cid": "C1.1",
+          "text": "이름·목적·지도 줄이 있다",
+          "target": "모두 있음"
+        },
+        {
+          "cid": "C1.2",
+          "text": "길이",
+          "target": "5~28초 (long_music이면 ~60초)"
+        },
+        {
+          "cid": "C1.3",
+          "text": "비율",
+          "target": "16:9 · 9:16 · 1:1"
+        },
+        {
+          "cid": "C1.4",
+          "text": "상업 여부를 정했다",
+          "target": "true / false"
+        },
+        {
+          "cid": "C1.5",
+          "text": "템플릿 또는 스킬",
+          "target": "1개 이상"
+        },
+        {
+          "cid": "C1.6",
+          "text": "브랜드 색",
+          "target": "hex 2개 이상"
+        },
+        {
+          "cid": "C1.7",
+          "text": "빠르기",
+          "target": "fast / explainer"
+        }
+      ],
+      "preconditions": []
+    },
+    {
+      "code": "M2",
+      "slug": "storyboard",
+      "label": "스토리보드",
+      "weight": "가벼움",
+      "goal": "모든 장면을 시간 위에 놓고 빠른 리듬을 설계한다",
+      "inputs": [
+        "brief.json",
+        "video-lab/index/curated.md 2장"
+      ],
+      "outputs": [
+        "projects/<이름>/storyboard.json",
+        "projects/<이름>/storyboard.md"
+      ],
+      "skills": [
+        "hyperframes-registry (전환 부품)",
+        "SKILLS_INDEX.md 7장"
+      ],
+      "approver": "사람 (G2)",
+      "requirements": [
+        {
+          "id": "F2.1",
+          "text": "보통 장면을 1마디(약 2초) 단위로 놓는다"
+        },
+        {
+          "id": "F2.2",
+          "text": "fast면 15초마다 몰아치기 1구간(55~75% 위치 기준, 30초면 2구간)을 5~9컷으로 넣는다"
+        },
+        {
+          "id": "F2.3",
+          "text": "장면마다 전환 부품과 글자(5단어 이하)를 정한다"
+        },
+        {
+          "id": "F2.4",
+          "text": "음악 BPM을 정한다 (기본 128)"
+        }
+      ],
+      "criteria": [
+        {
+          "cid": "C2.1",
+          "text": "타임라인 빈틈",
+          "target": "0~길이 전체, 빈틈 0.1초 이하"
+        },
+        {
+          "cid": "C2.2",
+          "text": "보통 장면 평균",
+          "target": "1.5~2.5초 (explainer 2~5초)"
+        },
+        {
+          "cid": "C2.3",
+          "text": "마지막 몰아치기 시작 위치",
+          "target": "55~75% (fast)"
+        },
+        {
+          "cid": "C2.4",
+          "text": "몰아치기마다 컷 수",
+          "target": "연속 5~9컷 (fast)"
+        },
+        {
+          "cid": "C2.5",
+          "text": "몰아치기 컷 간격",
+          "target": "각 0.2~0.4초 (fast)"
+        },
+        {
+          "cid": "C2.6",
+          "text": "장면당 글자",
+          "target": "5단어 이하"
+        },
+        {
+          "cid": "C2.7",
+          "text": "몰아치기 개수",
+          "target": "15초당 1개, 최소 1 (fast)"
+        }
+      ],
+      "preconditions": []
+    },
+    {
+      "code": "M3",
+      "slug": "music",
+      "label": "음악",
+      "weight": "무거움",
+      "goal": "BPM 고정 배경음과 박자 그리드를 만들고 컷을 박자에 맞춘다",
+      "inputs": [
+        "brief.json",
+        "storyboard.json"
+      ],
+      "outputs": [
+        "assets/bgm/bgm.wav",
+        "assets/bgm/bgm.grid.json",
+        "assets/bgm/report.json",
+        "박자에 맞춘 storyboard.json"
+      ],
+      "skills": [
+        "musicgen-trendy (비상업)",
+        "상업이면 구매곡/ACE-Step + post"
+      ],
+      "approver": "사람 (G3, 들어보고)",
+      "requirements": [
+        {
+          "id": "F3.1",
+          "text": "상업 여부로 음원 경로를 고른다 (상업이면 MusicGen 금지)"
+        },
+        {
+          "id": "F3.2",
+          "text": "프리셋·BPM·길이로 만들고 BPM 고정·음량 맞춤을 한다"
+        },
+        {
+          "id": "F3.3",
+          "text": "스토리보드 컷을 마디(보통)와 8분음표(몰아치기)에 맞춘다"
+        },
+        {
+          "id": "F3.4",
+          "text": "28초를 넘으면 앞 조각의 끝 4초를 이어받아 다음 조각을 만들고 붙인다 (long_music)"
+        }
+      ],
+      "criteria": [
+        {
+          "cid": "C3.1",
+          "text": "길이",
+          "target": "영상 길이 ±0.05초"
+        },
+        {
+          "cid": "C3.2",
+          "text": "BPM",
+          "target": "목표 ±2, 늘림 0.8~1.25배"
+        },
+        {
+          "cid": "C3.3",
+          "text": "음량",
+          "target": "-14 ±1 LUFS"
+        },
+        {
+          "cid": "C3.4",
+          "text": "박자 그리드",
+          "target": "bgm.grid.json 있음"
+        },
+        {
+          "cid": "C3.5",
+          "text": "라이선스",
+          "target": "상업이면 비상업(NC) 불가"
+        },
+        {
+          "cid": "C3.6",
+          "text": "이음새",
+          "target": "조각 수 맞음, 이음새 앞뒤 음량 차 3dB 이하 (긴 음악만)"
+        }
+      ],
+      "preconditions": [
+        "빈 메모리 2.5GB 이상",
+        "다른 무거운 작업 없이 혼자"
+      ]
+    },
+    {
+      "code": "M4",
+      "slug": "draft",
+      "label": "시험 렌더",
+      "weight": "무거움",
+      "goal": "구성을 만들고 30fps 초안으로 리듬을 실제로 잰다",
+      "inputs": [
+        "storyboard.json",
+        "bgm.wav",
+        "템플릿"
+      ],
+      "outputs": [
+        "projects/<이름>/draft.mp4"
+      ],
+      "skills": [
+        "opus-5-5-video-templates (0.8.96 고정)",
+        "hyperframes*",
+        "hyperframes-registry"
+      ],
+      "approver": "사람 (G4, 보고)",
+      "requirements": [
+        {
+          "id": "F4.1",
+          "text": "템플릿 복사 또는 새 프로젝트 (CLI 버전을 섞지 않는다)"
+        },
+        {
+          "id": "F4.2",
+          "text": "스토리보드 시간·전환·음악을 넣는다"
+        },
+        {
+          "id": "F4.3",
+          "text": "30fps, 워커 1개로 렌더한다"
+        }
+      ],
+      "criteria": [
+        {
+          "cid": "C4.1",
+          "text": "fps",
+          "target": "30"
+        },
+        {
+          "cid": "C4.2",
+          "text": "길이",
+          "target": "±0.15초"
+        },
+        {
+          "cid": "C4.3",
+          "text": "초당 컷",
+          "target": "0.6~0.8 (fast)"
+        },
+        {
+          "cid": "C4.4",
+          "text": "잰 몰아치기 위치",
+          "target": "55~75% (fast)"
+        },
+        {
+          "cid": "C4.5",
+          "text": "소리",
+          "target": "있음"
+        },
+        {
+          "cid": "C4.6",
+          "text": "계획대로 잘림",
+          "target": "계획 컷의 80% 이상이 ±0.1초 안"
+        },
+        {
+          "cid": "C4.7",
+          "text": "박자에 컷",
+          "target": "잰 컷의 80% 이상이 8분음표 ±0.05초 안"
+        }
+      ],
+      "preconditions": [
+        "빈 메모리 2.5GB 이상",
+        "다른 무거운 작업 없이 혼자"
+      ]
+    },
+    {
+      "code": "M5",
+      "slug": "final",
+      "label": "최종",
+      "weight": "무거움",
+      "goal": "60fps 완성본과 다음을 위한 배움 1개",
+      "inputs": [
+        "draft 승인된 구성"
+      ],
+      "outputs": [
+        "projects/<이름>/final.mp4",
+        "video-lab/index/proposals.md 제안"
+      ],
+      "skills": [
+        "hyperframes-cli",
+        "reel-export (비율 바꿀 때)"
+      ],
+      "approver": "사람 (G5)",
+      "requirements": [
+        {
+          "id": "F5.1",
+          "text": "60fps로 렌더한다 (빈 메모리 4GB 미만이면 워커 1개)"
+        },
+        {
+          "id": "F5.2",
+          "text": "비율이 다르면 reel-export로 바꾼다"
+        },
+        {
+          "id": "F5.3",
+          "text": "측정값·렌더 시간·메모리를 proposals.md에 [대기]로 남긴다"
+        }
+      ],
+      "criteria": [
+        {
+          "cid": "C5.1",
+          "text": "fps",
+          "target": "60"
+        },
+        {
+          "cid": "C5.2",
+          "text": "길이",
+          "target": "±0.15초"
+        },
+        {
+          "cid": "C5.3",
+          "text": "초당 컷·몰아치기",
+          "target": "M4와 같음"
+        },
+        {
+          "cid": "C5.4",
+          "text": "소리·음량",
+          "target": "있음, -14 ±1.5 LUFS"
+        },
+        {
+          "cid": "C5.5",
+          "text": "해상도",
+          "target": "비율대로 1920x1080 · 1080x1920 · 1080x1080"
+        },
+        {
+          "cid": "C5.6",
+          "text": "제안 기록",
+          "target": "proposals.md에 프로젝트 이름"
+        },
+        {
+          "cid": "C5.7",
+          "text": "업로드 형식",
+          "target": "H.264 + yuv420p"
+        }
+      ],
+      "preconditions": [
+        "빈 메모리 2.5GB 이상",
+        "다른 무거운 작업 없이 혼자"
+      ]
+    }
+  ],
+  "_rules": {
+    "length": "기본 5~28초. 28초 초과(최대 60초)는 brief.long_music=true일 때만 — 음악을 이어 붙여 만든다.",
+    "pace": "fast = 빠른 리듬 기준 적용, explainer = 몰아치기·초당 컷 기준 제외(해당 없음으로 통과)"
+  },
+  "status": "baseline",
+  "adopted": "2026-11-20"
+}

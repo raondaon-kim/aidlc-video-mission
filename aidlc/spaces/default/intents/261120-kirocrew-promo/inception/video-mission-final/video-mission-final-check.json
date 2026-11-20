@@ -1,0 +1,80 @@
+{
+ "mission": "final",
+ "project": "kirocrew-promo",
+ "measured_at": "2026-11-20T13:16:23",
+ "checks": [
+  {
+   "id": "fps",
+   "label": "fps",
+   "value": 60.0,
+   "target": "60",
+   "pass": true,
+   "cid": "C5.1"
+  },
+  {
+   "id": "length",
+   "label": "길이(초)",
+   "value": 15.0,
+   "target": "15.0 ±0.15",
+   "pass": true,
+   "cid": "C5.2"
+  },
+  {
+   "id": "audio",
+   "label": "소리",
+   "value": true,
+   "target": "있음",
+   "pass": true,
+   "cid": "C5.4"
+  },
+  {
+   "id": "cuts_per_sec",
+   "label": "초당 컷",
+   "value": 0.73,
+   "target": "0.6~0.8",
+   "pass": true,
+   "cid": "C5.3"
+  },
+  {
+   "id": "burst",
+   "label": "잰 몰아치기 위치 (마지막)",
+   "value": 0.563,
+   "target": "0.55~0.75",
+   "pass": true,
+   "cid": "C5.3"
+  },
+  {
+   "id": "size",
+   "label": "해상도",
+   "value": "1920x1080",
+   "target": "1920x1080",
+   "pass": true,
+   "cid": "C5.5"
+  },
+  {
+   "id": "loudness",
+   "label": "음량(LUFS)",
+   "value": -15.12,
+   "target": "-14.0 ±1.5",
+   "pass": true,
+   "cid": "C5.4"
+  },
+  {
+   "id": "proposal",
+   "label": "제안 기록",
+   "value": true,
+   "target": "proposals.md에 프로젝트 이름",
+   "pass": true,
+   "cid": "C5.6"
+  },
+  {
+   "id": "codec",
+   "label": "업로드 형식",
+   "value": "h264,yuv420p",
+   "target": "h264,yuv420p",
+   "pass": true,
+   "cid": "C5.7"
+  }
+ ],
+ "pass": true
+}
